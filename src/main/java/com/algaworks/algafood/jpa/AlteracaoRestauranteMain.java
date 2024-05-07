@@ -7,6 +7,8 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
+import java.math.BigDecimal;
+
 public class AlteracaoRestauranteMain {
 
     public static void main(String[] args) {
@@ -19,6 +21,7 @@ public class AlteracaoRestauranteMain {
         Restaurante restaurante = new Restaurante();
         restaurante.setId(1L);
         restaurante.setNome("Brasileira");
+        restaurante.setTaxaFrete(new BigDecimal(10));
 
         restauranteRepository.adicionar(restaurante);
 
